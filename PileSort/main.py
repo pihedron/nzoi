@@ -3,10 +3,10 @@
 N = int(input())
 
 nums = list(map(int, input().split()))
-piles = [nums[0]]
+piles = []
 
-for i in range(1, N):
-    min_pile = 10 ** 9
+for i in range(N):
+    min_pile = 10 ** 6
     index = -1
     for j in range(len(piles)):
         if nums[i] <= piles[j]:
@@ -17,6 +17,5 @@ for i in range(1, N):
         piles[index] = nums[i]
     else:
         piles.append(nums[i])
-        
 
 print(len(piles))
