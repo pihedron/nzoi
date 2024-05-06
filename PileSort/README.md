@@ -34,3 +34,88 @@ In the first example, 4 piles are required. The pages can be sorted by placing p
 ```
 4
 ```
+
+# Solution
+
+> ![WARNING]
+> The Python solution for this problem is not memory efficient enough to pass the last subtask of this problem.
+
+This problem can be broken down into 4 steps:
+- iterate over each page number
+- store the index of the pile where the top page has **lowest** number in the list of piles that is **greater** than the current page number
+- if the current page is **greater** than all the top pages in the pile (index outside range): create a new pile
+- else: place the current page on top of the pile at the index
+
+Whenever Mr Pile encounters a pile, he can only place the current page on the pile if the current page has a page number **less** than the top page. Otherwise, he needs to make a new pile. This makes sure that each pile will always be individually sorted in reverse order.
+
+An important detail to remember is that only the **top page number** matters because it is the only page number that the current page number is checked against. This means we do not have to store the whole stack of pages in the list of piles. Instead, we can save memory by only storing the top page number.
+
+```py
+N = int(input())
+piles = []
+
+for num in list(map(int, input().split())):
+    index = len(piles)
+    min_pile = 10 ** 6 # custom infinity
+    for j in range(len(piles)):
+        if num < piles[j]:
+            if piles[j] < min_pile:
+                min_pile = piles[j]
+                index = j
+    if index < len(piles):
+        piles[index] = num
+    else:
+        piles.append(num)
+
+print(len(piles))
+```
+
+The code above works but it is **time inefficient**. This is because we are performing a linear search on a list that is always going to be sorted. We can improve the time complexity of that loop from `O(n)` to `O(log n)` by replacing the linear search with binary search. In python, using `bisect.bisect_left` is quicker than making our own binary search function.
+
+```py
+import bisect
+
+N = int(input())
+piles = []
+
+for num in list(map(int, input().split())):
+    index = bisect.bisect_left(piles, num)
+    if index < len(piles):
+        piles[index] = num
+    else:
+        piles.append(num)
+
+print(len(piles))
+```
+
+Everything is working well, but this code exceeds the memory limit on the last subtask. This is because Python is an interpreted language, but we can fix this issue by rewriting it in C++. The C++ solution is just as simple as the Python one.
+
+```cpp
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+  vector<int> piles;
+  int N;
+  cin >> N;
+  for (int i = 0; i < N; i++)
+  {
+    int num;
+    cin >> num;
+    int index = distance(piles.begin(), lower_bound(piles.begin(), piles.end(), num));
+    if (index < piles.size())
+    {
+      piles[index] = num;
+    }
+    else
+    {
+      piles.push_back(num);
+    }
+  }
+  cout << piles.size();
+  return 0;
+}
+```
