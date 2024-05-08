@@ -68,7 +68,7 @@ for line in sys.stdin:
         break
 ```
 
-The goal is to find the shortest path and all the edges have an equal *distance* or *weighting*. Therefore, Dijkstra's algorithm with priority queue can be used to find the shortest path.
+The goal is to find the shortest path and all the edges have an equal *distance* or *weighting*. Therefore, Dijkstra's algorithm with priority queue can be used to find the shortest path. Note that this graph could be **cyclic**, meaning DFS is not .
 
 ```py
 def dijkstra():
