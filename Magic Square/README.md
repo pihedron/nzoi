@@ -6,47 +6,47 @@ You will be given a 3x3 magic square of positive integers. However, the magic sq
 
 Solve the magic square.
 
-# Input
+## Input
 There will be three lines, each containing three space-separated integers, representing elements of the incomplete magic square.
 
 Exactly N of the elements will be 0, indicating a missing value that must be found. All remaining elements will be between 1 and 10000 (inclusive).
 
-# Output
+## Output
 You should print three lines, each containing three space-separated integers, representing elements of the completed magic square.
 
 It is guaranteed that there is a unique solution, and that all elements of the solution will be between 1 and 10000 (inclusive).
 
-# Subtasks
+## Subtasks
 Subtask 1 (25%): N=1
 Subtask 2 (25%): 1≤N≤2
 Subtask 3 (25%): 1≤N≤3
 Subtask 4 (25%): 1≤N≤5
-# Sample Input 1
+## Sample Input 1
 ```
 3 3 6
 7 0 1
 2 5 5
 ```
-# Sample Output 1
+## Sample Output 1
 ```
 3 3 6
 7 4 1
 2 5 5
 ``` 
-# Sample Input 2
+## Sample Input 2
 ```
 6 1 0
 7 0 3
 0 9 4
 ```
-# Sample Output 2
+## Sample Output 2
 ```
 6 1 8
 7 5 3
 2 9 4
 ```
 
-# Solution
+## Solution
 
 This problem requires a combination of bruteforce and mathematics to solve the magic square efficiently. After drawing a few incomplete magic squares, it becomes clear which squares can be solved quickly and which squares need guessing.
 

@@ -6,25 +6,25 @@ If the N branches don't have the same total expense over the year, an internal f
 
 To ensure the total expenditure of the entire Cabal remains the same, you are allowed to subtract some integer amount from the expense of a branch and add it to the expense another branch as many times as necessary. If it is not possible to perfectly balance across the branches, you may ask some of the branches to spend more, but this amount should be minimised. You need to report the total extra spending necessary.
 
-# Input
+## Input
 The first line contains a single integer, N (2≤N≤100).
 
 The second line contains N space-separated integers between 0 and 1000 (inclusive), each representing the expense of one branch of the Cabal.
 
-# Output
+## Output
 Print a single integer - the minimum total extra spending needed to ensure the expenses across the branches balance.
 
-# Subtasks
+## Subtasks
 For 50% of the marks, N=2
-# Explanation
+## Explanation
 In sample case 1, we have three branches which have expended 10, 2, and 4 dollars. One optimal way to balance the branches is to subtract 4 from the first branch and add it to the second branch to get 6 6 4. Then we ask the third branch to spend 2 dollars more - getting a perfect balance of 6 6 6. So overall, the total extra spending is 2.
 
-# Sample Input 1
+## Sample Input 1
 ```
 3
 10 2 4
 ```
-# Sample Output 1
+## Sample Output 1
 ```
 2
 ```
