@@ -68,28 +68,26 @@ for line in sys.stdin:
         break
 ```
 
-The goal is to find the shortest path and all the edges have an equal *distance* or *weighting*. Therefore, Dijkstra's algorithm with priority queue can be used to find the shortest path. Note that this graph could be **cyclic**, meaning DFS is not .
+The goal is to find the shortest path and all the edges have an equal *distance* or *weighting*. Therefore, Dijkstra's algorithm with a priority queue can be used to find the shortest path. Note that this graph could be **cyclic**, meaning DFS is not a suitable algorithm. 
 
 ```py
 def dijkstra():
-    heap = [(0, start)] # cost from start node, end node
+    heap = [(0, start)] # start -> start has cost of 0
     visited = set()
     prev = [-1 for _ in range(n)]
     dist = [10 ** 9 for _ in range(n)]
     dist[start] = 0
-    total_cost = -1
     while heap:
         (cost, u) = heapq.heappop(heap)
         if u in visited:
             continue
         visited.add(u)
         if u == end:
-            total_cost = cost
             break
         for v in adj[u]:
             if v in visited:
                 continue
-            alt = dist[u] + 1 # edge weight of 1
+            alt = dist[u] + 1
             if dist[v] > alt:
                 dist[v] = alt
                 heapq.heappush(heap, (dist[v], v))
@@ -103,3 +101,5 @@ def dijkstra():
     path.reverse()
     return path
 ```
+
+The cost or weight of the edge is at index 0 of the tuple to give priority to items based on their cost in the priority queue. The cost variable is mostly unused because all edges have the same weight of 1.

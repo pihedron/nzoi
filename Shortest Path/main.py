@@ -9,7 +9,7 @@ start, end = map(int, input().split())
 adj = [[] for _ in range(n)]
 
 def dijkstra():
-    heap = [(0, start)]  # cost from start node, end node
+    heap = [(0, start)] # start -> start has cost of 0
     visited = set()
     prev = [-1 for _ in range(n)]
     dist = [10 ** 9 for _ in range(n)]
@@ -40,8 +40,8 @@ def dijkstra():
 
 for line in sys.stdin:
     try:
-        x, y = map(int, line.split())
-        adj[x].append(y)
+        u, v = map(int, line.split())
+        adj[u].append(v)
     except:
         break
 
