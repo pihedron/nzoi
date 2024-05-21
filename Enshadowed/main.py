@@ -1,3 +1,5 @@
+# https://train.nzoi.org.nz/problems/1306
+
 import heapq
 
 DP = 6
