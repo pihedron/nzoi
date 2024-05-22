@@ -62,6 +62,12 @@ sx, sy, ex, ey = map(float, input().split())
 N = int(input()) # number of shadows
 
 vertices = [(sx, sy, 0), (ex, ey, 0)]
+
+for i in range(N):
+    x, y, r = map(float, input().split())
+    vertices.append((x, y, r))
+
+V = len(vertices)
 ```
 
 Since being in the shade does not count as walking in the sun, the weight of each edge is the distance between the nodes minus the sum of their radii. However, this formula can result in negative edge weights and provide an incorrect answer when shadows intersect. Therefore, the edge weight should be corrected to 0 whenever it is less than 0.
