@@ -27,10 +27,10 @@ def dijkstra():
         if u in visited:
             continue
         visited.add(u)
-        if x == ex and y == ey:
+        if u == 1:
             break
         for v in range(1, V):
-            if v in visited or v == u:
+            if v == u or v in visited:
                 continue
             dx = vertices[v][0] - x
             dy = vertices[v][1] - y
