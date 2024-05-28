@@ -6,6 +6,11 @@ N, P, S, E = map(int, input().split())
 
 adj = [[] for _ in range(N)]
 
+for _ in range(P):
+    u, v = map(int, input().split())
+    adj[u].append(v)
+    adj[v].append(u)
+
 def dijkstra():
     heap = [(0, S)]
     visited = set()
@@ -26,10 +31,5 @@ def dijkstra():
                 dist[v] = alt
                 heapq.heappush(heap, (dist[v], v))
     return dist[E]
-
-for _ in range(P):
-    u, v = map(int, input().split())
-    adj[u].append(v)
-    adj[v].append(u)
 
 print(dijkstra())

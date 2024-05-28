@@ -5,9 +5,9 @@ You are a robot who has suddenly gained sentience. You wake up in a dark laborat
 Given a list of rooms and the passages connecting them, find the minimum number of passages you must travel through to reach the exit. It is guaranteed that you will be able to reach the exit. Passages can be traveled in any direction.
 
 ## Input
-The first line will contain four space-separated integers: N, the number of rooms in the maze, P, the number of passages, S, the room number of the laboratory which you start in, and E, the room number of the exit.
+The first line will contain four space-separated integers: $N$, the number of rooms in the maze, $P$, the number of passages, $S$, the room number of the laboratory which you start in, and $E$, the room number of the exit.
 
-Note that rooms are numbered from 0 up to N–1.
+Note that rooms are numbered from $0$ up to $N–1$.
 
 P lines follow, one for each passage. Each line contains two space separated integers, which are the two room numbers between which the passage runs. Passages can be traversed in both directions.
 
@@ -15,20 +15,20 @@ P lines follow, one for each passage. Each line contains two space separated int
 You should print a single integer – the minimum number of passages you must travel through to reach the exit.
 
 ## Constraints
-1≤N≤100000
-0≤P≤100000
-0≤S,E<N
-Subtasks
-Subtask 1 (50%): N≤100, P<N, and each room is connected to at most 2 other rooms (i.e. in one long chain with no loops). See Sample 1.
-Subtask 2 (40%): N≤100, P≤200. See Sample 2.
+$1≤N≤100000$
+$0≤P≤100000$
+$0≤S,E<N$
+## Subtasks
+Subtask 1 (50%): $N≤100$, $P<N$, and each room is connected to at most 2 other rooms (i.e. in one long chain with no loops). See Sample 1.
+Subtask 2 (40%): $N≤100$, $P≤200$. See Sample 2.
 Subtask 3 (10%): No further restrictions apply.
-Sample Visualisations
+## Sample Visualisations
 Go from dot to x.
 
-## Sample 1 (for Subtask 1):
+### Sample 1 (for Subtask 1):
 (![https://train.nzoi.org.nz/problems/1034/files/download/robot-linear.png](https://train.nzoi.org.nz/problems/1034/files/download/robot-linear.png))
 
-## Sample 2 (for Subtask 2 & 3):
+### Sample 2 (for Subtask 2 & 3):
 (![https://train.nzoi.org.nz/problems/1034/files/download/robot-cyc.png](https://train.nzoi.org.nz/problems/1034/files/download/robot-cyc.png))
 
 ## Sample Input 1
@@ -63,4 +63,18 @@ Go from dot to x.
 ## Sample Output 2
 ```
 3
+```
+# Solution
+
+This problem can be solved using Dijkstra's algorithm. Since passages can be travelled in both directions, the lab is an undirected graph. This means there are 2 directed edges for each passage.
+
+```py
+N, P, S, E = map(int, input().split())
+
+adj = [[] for _ in range(N)]
+
+for _ in range(P):
+    u, v = map(int, input().split())
+    adj[u].append(v)
+    adj[v].append(u)
 ```

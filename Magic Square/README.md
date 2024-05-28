@@ -2,25 +2,25 @@
 
 A magic square is a square grid of numbers where the sums of each row, column, and both diagonals are the same.
 
-You will be given a 3x3 magic square of positive integers. However, the magic square is incomplete – there are N missing elements, denoted by the value 0.
+You will be given a 3x3 magic square of positive integers. However, the magic square is incomplete – there are $N$ missing elements, denoted by the value $0$.
 
 Solve the magic square.
 
 ## Input
 There will be three lines, each containing three space-separated integers, representing elements of the incomplete magic square.
 
-Exactly N of the elements will be 0, indicating a missing value that must be found. All remaining elements will be between 1 and 10000 (inclusive).
+Exactly $N$ of the elements will be $0$, indicating a missing value that must be found. All remaining elements will be between $1$ and $10000$ (inclusive).
 
 ## Output
 You should print three lines, each containing three space-separated integers, representing elements of the completed magic square.
 
-It is guaranteed that there is a unique solution, and that all elements of the solution will be between 1 and 10000 (inclusive).
+It is guaranteed that there is a unique solution, and that all elements of the solution will be between $1$ and $10000$ (inclusive).
 
 ## Subtasks
-Subtask 1 (25%): N=1
-Subtask 2 (25%): 1≤N≤2
-Subtask 3 (25%): 1≤N≤3
-Subtask 4 (25%): 1≤N≤5
+Subtask 1 (25%): $N=1$
+Subtask 2 (25%): $1≤N≤2$
+Subtask 3 (25%): $1≤N≤3$
+Subtask 4 (25%): $1≤N≤5$
 ## Sample Input 1
 ```
 3 3 6

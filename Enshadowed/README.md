@@ -6,35 +6,35 @@ Luckily, there are some trees on campus providing delicious shade. The universit
 
 Given Roxy's position and destination, and the centers and radii of the shadows, output the minimum distance Roxy must travel in the sun to get to her lecture.
 
-# Input
-The first line contains 4 space-separated numbers, xR yR xL yL, where (xR,yR) are Roxy's (Cartesian) coordinates and (xL,yL) are the coordinates of her destination. The second line contains a single integer N, the number of shadows. The following N lines each contain three space separated numbers, xC yC r, indicating there is a shadow centered at (xC,yC) with radius r.
+## Input
+The first line contains 4 space-separated numbers, $x_R$ $y_R$ $x_L$ $y_L$, where $(x_R,y_R)$ are Roxy's (Cartesian) coordinates and $(x_L,y_L)$ are the coordinates of her destination. The second line contains a single integer $N$, the number of shadows. The following $N$ lines each contain three space separated numbers, $x_C$ $y_C$ $r$, indicating there is a shadow centered at $(x_C,y_C)$ with radius $r$.
 
-# Output
-Output a single floating-point number, the minimum distance Roxy must travel in the sun. You must output the distance within a 10−4 error.
+## Output
+Output a single **floating-point** number, the minimum distance Roxy must travel in the sun. You must output the distance within a $10^{−4}$ error.
 
-# Constraints
-−1000≤xR,yR,xL,yL,xC,yC≤1000
-0≤r≤1000
-1≤N≤500
-Subtasks
-Subtask 1 (+20%): N=1
-Subtask 2 (+30%): N≤20
+## Constraints
+$−1000≤xR,yR,xL,yL,xC,yC≤1000$
+$0≤r≤1000$
+$1≤N≤500$
+## Subtasks
+Subtask 1 (+20%): $N=1$
+Subtask 2 (+30%): $N≤20$
 Subtask 3 (+50%): No further constraints.
-Note
-For students using C++, std::cout by default does not print floating-point numbers with enough precision to pass the test data. Instead use printf or set the precision manually with std::cout.precision().
+## Note
+For students using C++, `std::cout` by default does not print floating-point numbers with enough precision to pass the test data. Instead use `printf` or set the precision manually with `std::cout.precision()`.
 
-# Sample Input 1
+## Sample Input 1
 ```
 0.0 0.0 4.0 0.0
 1
 2.0 0.0 1.0
 ```
-# Sample Output 1
+## Sample Output 1
 ```
 2.000000
 ```
  
-# Sample Input 2
+## Sample Input 2
 ```
 0.0 1.0 20.0 -6.0
 3
@@ -42,7 +42,7 @@ For students using C++, std::cout by default does not print floating-point numbe
 4.0 2.0 3.0
 7.0 -6.0 2.0
 ```
-# Sample Output 2
+## Sample Output 2
 ```
 15.667109
 ```
