@@ -17,9 +17,9 @@ You should print a single integer – the minimum number of passages you must tr
 ## Constraints
 $1\le N\le 100000$
 $0\le P\le 100000$
-$0\le S,E<N$
+$0\le S,E\lt N$
 ## Subtasks
-Subtask 1 (50%): $N\le 100$, $P<N$, and each room is connected to at most 2 other rooms (i.e. in one long chain with no loops). See Sample 1.
+Subtask 1 (50%): $N\le 100$, $P\t N$, and each room is connected to at most 2 other rooms (i.e. in one long chain with no loops). See Sample 1.
 Subtask 2 (40%): $N\le 100$, $P\le 200$. See Sample 2.
 Subtask 3 (10%): No further restrictions apply.
 ## Sample Visualisations
