@@ -18,9 +18,9 @@ It is guaranteed that there is a unique solution, and that all elements of the s
 
 ## Subtasks
 Subtask 1 (25%): $N=1$
-Subtask 2 (25%): $1≤N≤2$
-Subtask 3 (25%): $1≤N≤3$
-Subtask 4 (25%): $1≤N≤5$
+Subtask 2 (25%): $1\le N\le 2$
+Subtask 3 (25%): $1\le N\le 3$
+Subtask 4 (25%): $1\le N\le 5$
 ## Sample Input 1
 ```
 3 3 6
@@ -50,7 +50,7 @@ Subtask 4 (25%): $1≤N≤5$
 
 This problem requires a combination of bruteforce and mathematics to solve the magic square efficiently. After drawing a few incomplete magic squares, it becomes clear which squares can be solved quickly and which squares need guessing.
 
-When N ≤ 2, the solution is trivial because the square is guaranteed to have at least 1 complete line where the target sum or the *magic total* can be calculated. 
+When N \le  2, the solution is trivial because the square is guaranteed to have at least 1 complete line where the target sum or the *magic total* can be calculated. 
 
 ```py
 N = 0

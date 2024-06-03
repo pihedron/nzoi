@@ -11,7 +11,7 @@ Naturally, a page can only be picked up if it is on the top. Therefore, a higher
 Your job is to find out the minimum number of piles K so that Mr Pile can sort all the pages.
 
 ## Input
-The first line will contain a single integer $N$ (1≤100,000).
+The first line will contain a single integer $N$ (1\le 100,000).
 
 The second line will have $N$ space-separated integers, the page numbers in the order that Mr Pile first places them on top of one of the $K$ piles.
 
@@ -19,8 +19,8 @@ The second line will have $N$ space-separated integers, the page numbers in the 
 On a single line, print a single integer, the minimum possible $K$.
 
 ## Subtasks
-Subtask 1 (20%), $N≤20$
-Subtask 2 (40%), $N≤1000$
+Subtask 1 (20%), $N\le 20$
+Subtask 2 (40%), $N\le 1000$
 Subtask 3 (40%), no further constraints apply
 ## Explanation
 In the first example, 4 piles are required. The pages can be sorted by placing page 1 in the first pile, page 2 in the second pile, pages 4 and 6 in the third pile, and pages 3 and 5 in the fourth pile. Note that page 2 cannot be placed in the same pile as page 1 because otherwise, Mr Pile wouldn't be able to pick up page 1 before page 2.

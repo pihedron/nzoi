@@ -15,12 +15,12 @@ P lines follow, one for each passage. Each line contains two space separated int
 You should print a single integer – the minimum number of passages you must travel through to reach the exit.
 
 ## Constraints
-$1≤N≤100000$
-$0≤P≤100000$
-$0≤S,E<N$
+$1\le N\le 100000$
+$0\le P\le 100000$
+$0\le S,E<N$
 ## Subtasks
-Subtask 1 (50%): $N≤100$, $P<N$, and each room is connected to at most 2 other rooms (i.e. in one long chain with no loops). See Sample 1.
-Subtask 2 (40%): $N≤100$, $P≤200$. See Sample 2.
+Subtask 1 (50%): $N\le 100$, $P<N$, and each room is connected to at most 2 other rooms (i.e. in one long chain with no loops). See Sample 1.
+Subtask 2 (40%): $N\le 100$, $P\le 200$. See Sample 2.
 Subtask 3 (10%): No further restrictions apply.
 ## Sample Visualisations
 Go from dot to x.

@@ -7,7 +7,7 @@ If the $N$ branches don't have the same total expense over the year, an internal
 To ensure the total expenditure of the entire Cabal remains the same, you are allowed to subtract some integer amount from the expense of a branch and add it to the expense another branch as many times as necessary. If it is not possible to perfectly balance across the branches, you may ask some of the branches to spend more, but this amount should be minimised. You need to report the total extra spending necessary.
 
 ## Input
-The first line contains a single integer, $N$ (2≤N≤100).
+The first line contains a single integer, $N$ (2\le N\le 100).
 
 The second line contains $N$ space-separated integers between $0$ and $1000$ (inclusive), each representing the expense of one branch of the Cabal.
 
