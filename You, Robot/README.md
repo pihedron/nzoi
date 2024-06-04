@@ -26,10 +26,10 @@ Subtask 3 (10%): No further restrictions apply.
 Go from dot to x.
 
 ### Sample 1 (for Subtask 1):
-(![https://train.nzoi.org.nz/problems/1034/files/download/robot-linear.png](https://train.nzoi.org.nz/problems/1034/files/download/robot-linear.png))
+![https://train.nzoi.org.nz/problems/1034/files/download/robot-linear.png](https://train.nzoi.org.nz/problems/1034/files/download/robot-linear.png)
 
 ### Sample 2 (for Subtask 2 & 3):
-(![https://train.nzoi.org.nz/problems/1034/files/download/robot-cyc.png](https://train.nzoi.org.nz/problems/1034/files/download/robot-cyc.png))
+![https://train.nzoi.org.nz/problems/1034/files/download/robot-cyc.png](https://train.nzoi.org.nz/problems/1034/files/download/robot-cyc.png)
 
 ## Sample Input 1
 ```
