@@ -8,7 +8,6 @@ d = [] # max distance
 
 adj = [[] for _ in range(M)]
 trivial = True
-moves = []
 
 for i in range(N):
     k_i = int(input())
@@ -37,10 +36,11 @@ for j in p:
             continue
         trivial = True
         k[i] -= 1
-        moves.append(str(i + 1))
+        h[j] = i
 
 if trivial:
     print("SOLUTION IS TRIVIAL")
-    print("\n".join(moves))
+    for i in h:
+        print(i + 1)
 else:
     print("SOLUTION IS NON-TRIVIAL")
