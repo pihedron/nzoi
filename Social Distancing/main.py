@@ -7,7 +7,6 @@ h = [] # starting house
 d = [] # max distance
 
 adj = [[] for _ in range(M)]
-trivial = True
 
 for i in range(N):
     k_i = int(input())
@@ -25,6 +24,7 @@ for j in range(M):
         if abs(h[j] - i) <= d[j]:
             adj[j].append(i)
 
+trivial = sum(k) >= M
 p = sorted(range(M), key=lambda j: len(adj[j]))
 
 for j in p:
@@ -37,6 +37,7 @@ for j in p:
         trivial = True
         k[i] -= 1
         h[j] = i
+        break
 
 if trivial:
     print("SOLUTION IS TRIVIAL")
