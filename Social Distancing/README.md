@@ -20,31 +20,21 @@ If there does not exist a valid assignment, only output the string `SOLUTION IS 
 
 ## Constraints
 For all subtasks:
-
-$1\le N,M\le 50,000$
-
-$1\le X\le 10,000$
-
-$0\le ki\le 50,000$ for all $i$
-
-$1\le hj\le N$ for all $j$
-
-$0\le dj\le 500,000,000$ for all $j$
+ - $1\le N,M\le 50,000$
+ - $1\le X\le 10,000$
+ - $0\le ki\le 50,000$ for all $i$
+ - $1\le hj\le N$ for all $j$
+ - $0\le dj\le 500,000,000$ for all $j$
 
 ## Subtasks
 Additional constraints may apply to subtasks:
 
-Subtask 1 (13%): There are at most 2 houses with non-zero occupant limits ($k_i>0$). In other words, there are at most two houses which all programmers must move to.
-
-Subtask 2 (12%): $N,M\le 6$
-
-Subtask 3 (31%): $d_j<2X$ for all $j$
-
-Subtask 4 (25%): $N\le 1000$
-
-Subtask 5 (19%): No further constraints
-
-Subtasks are not necessarily in difficulty order.
+ - Subtask 1 (13%): There are at most 2 houses with non-zero occupant limits ($k_i>0$). In other words, there are at most two houses which all programmers must move to.
+ - Subtask 2 (12%): $N,M\le 6$
+ - Subtask 3 (31%): $d_j<2X$ for all $j$
+ - Subtask 4 (25%): $N\le 1000$
+ - Subtask 5 (19%): No further constraints
+ - Subtasks are not necessarily in difficulty order.
 
 ## Sample Explanations
 Note that sample 1 fits within the constraints of subtasks 2, 4, and 5 and sample 2 fits within the constraints of subtasks 1, 2, 4, and 5.

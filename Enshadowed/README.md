@@ -13,13 +13,13 @@ The first line contains 4 space-separated numbers, $x_R$ $y_R$ $x_L$ $y_L$, wher
 Output a single **floating-point** number, the minimum distance Roxy must travel in the sun. You must output the distance within a $10^{−4}$ error.
 
 ## Constraints
-$−1000\le xR,yR,xL,yL,xC,yC\le 1000$
-$0\le r\le 1000$
-$1\le N\le 500$
+ - $−1000\le xR,yR,xL,yL,xC,yC\le 1000$
+ - $0\le r\le 1000$
+ - $1\le N\le 500$
 ## Subtasks
-Subtask 1 (+20%): $N=1$
-Subtask 2 (+30%): $N\le 20$
-Subtask 3 (+50%): No further constraints.
+ - Subtask 1 (+20%): $N=1$
+ - Subtask 2 (+30%): $N\le 20$
+ - Subtask 3 (+50%): No further constraints.
 ## Note
 For students using C++, `std::cout` by default does not print floating-point numbers with enough precision to pass the test data. Instead use `printf` or set the precision manually with `std::cout.precision()`.
 

@@ -17,10 +17,10 @@ You should print three lines, each containing three space-separated integers, re
 It is guaranteed that there is a unique solution, and that all elements of the solution will be between $1$ and $10000$ (inclusive).
 
 ## Subtasks
-Subtask 1 (25%): $N=1$
-Subtask 2 (25%): $1\le N\le 2$
-Subtask 3 (25%): $1\le N\le 3$
-Subtask 4 (25%): $1\le N\le 5$
+ - Subtask 1 (25%): $N=1$
+ - Subtask 2 (25%): $1\le N\le 2$
+ - Subtask 3 (25%): $1\le N\le 3$
+ - Subtask 4 (25%): $1\le N\le 5$
 ## Sample Input 1
 ```
 3 3 6
