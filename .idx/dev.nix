@@ -2,6 +2,7 @@
   channel = "stable-23.11"; # or "unstable"
   packages = [
     pkgs.python3
+    pkgs.clang
   ];
   env = {};
   idx = {
