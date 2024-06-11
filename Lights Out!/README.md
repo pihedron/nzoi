@@ -14,9 +14,9 @@ After all of the people have walked the corridor, how many switches are on?
 ## Input
 The input will be a two lines.
 
-The first line contains N, the number of lights in the corridor.
+The first line contains $N$, the number of lights in the corridor.
 
-The second line contains M, the number of people.
+The second line contains $M$, the number of people.
 
 ## Output
 Ouput the number of lights on after the M people have walked along the corridor.
