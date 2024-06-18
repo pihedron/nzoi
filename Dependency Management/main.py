@@ -25,14 +25,18 @@ for a in range(N):
         if A_deps[a] == B_deps[b]:
             common.append((a, b))
 
-def find_common(v_a, v_b):
+def versions_match(i, j):
+    for a, b in common:
+        if A[i][a] != B[j][b]:
+            return False
+    return True
+
+def find_latest_version():
     for i in reversed(range(V_A)):
         for j in reversed(range(V_B)):
-            if A[i][a] == B[j][b]:
-                return (min(v_a, i), min(v_b, j))
+            if versions_match(i, j):
+                return i, j
 
-for c in common:
-    a, b = c
-    v_a, v_b = find_common(v_a, v_b)
+v_a, v_b = find_latest_version()
 
 print(v_a, v_b)
