@@ -17,8 +17,6 @@ for v in range(V_B):
     B[v] = list(map(int, input().split()))
 
 common = []
-v_a = V_A - 1
-v_b = V_B - 1
 
 for a in range(N):
     for b in range(M):
@@ -37,6 +35,4 @@ def find_latest_version():
             if versions_match(i, j):
                 return i, j
 
-v_a, v_b = find_latest_version()
-
-print(v_a, v_b)
+print(*find_latest_version())

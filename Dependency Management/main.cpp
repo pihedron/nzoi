@@ -6,7 +6,7 @@ using namespace std;
 int N, M, V_A, V_B;
 vector<pair<int, int>> common;
 
-bool versions_match(int (&A)[V_A][N], int (&B)[V_A][N], int i, int j)
+bool versions_match(vector<vector<int>> &A, vector<vector<int>> &B, int i, int j)
 {
   for (auto [a, b] : common)
   {
@@ -18,7 +18,7 @@ bool versions_match(int (&A)[V_A][N], int (&B)[V_A][N], int i, int j)
   return true;
 }
 
-pair<int, int> find_latest_version(int (&A)[V_A][N], int (&B)[V_A][N])
+pair<int, int> find_latest_version(vector<vector<int>> &A, vector<vector<int>> &B)
 {
   for (int i = V_A - 1; i >= 0; i--)
   {
@@ -30,27 +30,23 @@ pair<int, int> find_latest_version(int (&A)[V_A][N], int (&B)[V_A][N])
       }
     }
   }
+  return {-1, -1};
 } 
 
 int main()
 {
   cin >> N >> M >> V_A >> V_B;
 
-  int A_deps[N];
-  int B_deps[M];
+  string A_deps[N];
+  string B_deps[M];
+
+  vector<vector<int>> A(V_A, vector<int>(N));
+  vector<vector<int>> B(V_B, vector<int>(M));
 
   for (int a = 0; a < N; a++)
   {
     cin >> A_deps[a];
   }
-
-  for (int b = 0; b < M; b++)
-  {
-    cin >> B_deps[b];
-  }
-
-  int A[V_A][N];
-  int B[V_B][M];
 
   for (int i = 0; i < V_A; i++)
   {
@@ -58,6 +54,11 @@ int main()
     {
       cin >> A[i][a];
     }
+  }
+
+  for (int b = 0; b < M; b++)
+  {
+    cin >> B_deps[b];
   }
 
   for (int j = 0; j < V_B; j++)
@@ -82,9 +83,8 @@ int main()
     }
   }
 
-  v_a = find_latest_version(A, B).first;
-  v_b = find_latest_version(A, B).second;
+  pair<int, int> v = find_latest_version(A, B);
 
-  cout << v_a << " " << v_b << endl;
+  cout << v.first << " " << v.second << endl;
   return 0;
 }
