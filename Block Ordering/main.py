@@ -2,11 +2,12 @@
 
 import math
 import itertools
+from typing import List
 
 N = int(input())
 
-chunks = []
-chunk = [] # len(chunk) < 8
+chunks = [] # type: List[List[str]]
+chunk = [] # type: List[str]
 
 for _ in range(N):
     block = input()
@@ -18,7 +19,7 @@ for _ in range(N):
 
 chunks.append(chunk)
 
-def arrangement_valid(c, arrangement, bounds):
+def arrangement_valid(c, arrangement, bounds): # type: (List[str], List[int], List[List[int]]) -> bool
     for i, id in enumerate(arrangement):
         if not bounds[id][0] < i < bounds[id][1]:
             return False
@@ -31,7 +32,7 @@ def arrangement_valid(c, arrangement, bounds):
                 return False
     return True
 
-def solve_chunk(c):
+def solve_chunk(c): # (List[str]) -> int
     if len(c) <= 1:
         return 1
     bounds = [[0, len(c)] for _ in c]
