@@ -16,21 +16,21 @@ For some graph problems like **Sunsprint**, Python is not fast enough to complet
 
 ```py
 def dijkstra(adj, n, start, end):
-    heap = [(0, start)] # distance to start is 0
-    visited = set()
-    dist = [10 ** 9 for _ in range(n)] # set all distances from start to infinity
+    heap = [(0, start)]
+    visited = [False] * n
+    dist = [10 ** 9 for _ in range(n)]
     dist[start] = 0
     while heap:
-        (w, u) = heapq.heappop(heap)
-        if u in visited: # already visited node
+        (d, u) = heapq.heappop(heap)
+        if visited[u]:
             continue
-        visited.add(u)
-        if u == end: # end reached
+        visited[u] = True
+        if u == end:
             break
-        for v in adj[u]: # iterate outgoing edges
-            if v in visited:
+        for (v, w) in adj[u]:
+            if visited[v]:
                 continue
-            d = dist[u] + w # distance from start
+            d += w
             if dist[v] > d:
                 dist[v] = d
                 heapq.heappush(heap, (dist[v], v))
