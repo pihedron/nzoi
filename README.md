@@ -30,7 +30,7 @@ def dijkstra(adj, n, start, end):
         for (v, w) in adj[u]:
             if visited[v]:
                 continue
-            d += w
+            d = dist[u] + w
             if dist[v] > d:
                 dist[v] = d
                 heapq.heappush(heap, (dist[v], v))
