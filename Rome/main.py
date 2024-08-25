@@ -1,3 +1,5 @@
+# https://train.nzoi.org.nz/problems/1389
+
 N = int(input())
 h = list(map(int, input().split()))
 
